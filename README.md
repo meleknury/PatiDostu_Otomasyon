@@ -1,0 +1,1 @@
+# PatiDostu_Otomasyon
