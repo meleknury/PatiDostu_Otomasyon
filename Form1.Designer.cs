@@ -124,6 +124,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Bakım Kayıtları";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
 
             this.btn_nav_kategoriler.BackColor = System.Drawing.Color.Gray;
             this.btn_nav_kategoriler.ForeColor = System.Drawing.Color.White;
