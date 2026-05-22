@@ -114,6 +114,7 @@
             this.btn_nav_gonulluler.TabIndex = 4;
             this.btn_nav_gonulluler.Text = "Gönüllüler";
             this.btn_nav_gonulluler.UseVisualStyleBackColor = false;
+            this.btn_nav_gonulluler.Click += new System.EventHandler(this.btn_nav_gonulluler_Click);
 
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -134,6 +135,7 @@
             this.btn_nav_kategoriler.TabIndex = 6;
             this.btn_nav_kategoriler.Text = "Kategoriler";
             this.btn_nav_kategoriler.UseVisualStyleBackColor = false;
+            this.btn_nav_kategoriler.Click += new System.EventHandler(this.btn_nav_kategoriler_Click);
 
             this.pnl_main.Controls.Add(this.pnl_content);
             this.pnl_main.Controls.Add(this.pnl_topbar);

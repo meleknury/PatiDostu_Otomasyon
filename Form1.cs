@@ -149,5 +149,17 @@ namespace PatiDostu_Otomasyon
             Form2 f2 = new Form2();
             f2.Show();
         }
+
+        private void btn_nav_kategoriler_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
+        }
+
+        private void btn_nav_gonulluler_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Show();
+        }
     }
 }
