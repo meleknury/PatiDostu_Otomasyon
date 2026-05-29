@@ -15,6 +15,7 @@ namespace PatiDostu_Otomasyon
             InitializeComponent();
             SetupDataGridView();
             LoadCategories();
+            SetupIcons();
         }
 
         private void SetupDataGridView()
@@ -26,6 +27,39 @@ namespace PatiDostu_Otomasyon
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 248, 240);
             dataGridView1.RowTemplate.Height = 35;
             dataGridView1.GridColor = Color.FromArgb(220, 240, 220);
+        }
+
+        private void SetupIcons()
+        {
+            try
+            {
+                string iconPath = Application.StartupPath + @"\Resources\Icons\";
+
+                SetButtonIcon(btn_nav_hayvanlar, iconPath + "icons8-dog-64.png", 20);
+                SetButtonIcon(btn_nav_gonulluler, iconPath + "icons8-volunteer-64.png", 20);
+                SetButtonIcon(button1, iconPath + "icons8-clipboard-64.png", 20);
+                SetButtonIcon(btn_nav_kategoriler, iconPath + "icons8-list-50.png", 20);
+
+                SetButtonIcon(btn_ekle, iconPath + "icons8-add-user-64.png", 18);
+                SetButtonIcon(btn_sil, iconPath + "icons8-delete-100.png", 18);
+                SetButtonIcon(btn_guncelle, iconPath + "icons8-edit-64.png", 18);
+                SetButtonIcon(btn_listele, iconPath + "icons8-list-50.png", 18);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"İkon yüklenemedi: {ex.Message}");
+            }
+        }
+
+        private void SetButtonIcon(Button btn, string path, int size)
+        {
+            Image original = Image.FromFile(path);
+            Image resized = new Bitmap(original, new Size(size, size));
+            btn.Image = resized;
+            btn.ImageAlign = ContentAlignment.MiddleLeft;
+            btn.TextAlign = ContentAlignment.MiddleRight;
+            btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn.Padding = new Padding(5, 0, 0, 0);
         }
 
         private void LoadCategories()

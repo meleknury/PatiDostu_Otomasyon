@@ -35,7 +35,7 @@
             this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
 
-            // pnl_topbar
+            
             this.pnl_topbar.BackColor = System.Drawing.Color.White;
             this.pnl_topbar.Controls.Add(this.lbl_header);
             this.pnl_topbar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -44,7 +44,7 @@
             this.pnl_topbar.Size = new System.Drawing.Size(1100, 60);
             this.pnl_topbar.TabIndex = 0;
 
-            // lbl_header
+            
             this.lbl_header.AutoSize = true;
             this.lbl_header.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbl_header.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -53,7 +53,7 @@
             this.lbl_header.TabIndex = 0;
             this.lbl_header.Text = "Gönüllüler";
 
-            // dataGridView1
+            
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -68,7 +68,7 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 
-            // pnl_form
+            
             this.pnl_form.BackColor = System.Drawing.Color.FromArgb(240, 248, 240);
             this.pnl_form.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_form.Controls.Add(this.lbl_title);
@@ -87,7 +87,7 @@
             this.pnl_form.Size = new System.Drawing.Size(300, 380);
             this.pnl_form.TabIndex = 2;
 
-            // lbl_title
+            
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_title.ForeColor = System.Drawing.Color.SeaGreen;
@@ -96,46 +96,46 @@
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "Gönüllü Bilgileri";
 
-            // lbl_isim
+            
             this.lbl_isim.AutoSize = true;
             this.lbl_isim.Location = new System.Drawing.Point(10, 50);
             this.lbl_isim.Name = "lbl_isim";
             this.lbl_isim.TabIndex = 1;
             this.lbl_isim.Text = "Ad Soyad";
 
-            // txt_isim
+            
             this.txt_isim.Location = new System.Drawing.Point(10, 70);
             this.txt_isim.Name = "txt_isim";
             this.txt_isim.Size = new System.Drawing.Size(260, 27);
             this.txt_isim.TabIndex = 2;
 
-            // lbl_telefon
+            
             this.lbl_telefon.AutoSize = true;
             this.lbl_telefon.Location = new System.Drawing.Point(10, 110);
             this.lbl_telefon.Name = "lbl_telefon";
             this.lbl_telefon.TabIndex = 3;
             this.lbl_telefon.Text = "Telefon";
 
-            // txt_telefon
+            
             this.txt_telefon.Location = new System.Drawing.Point(10, 130);
             this.txt_telefon.Name = "txt_telefon";
             this.txt_telefon.Size = new System.Drawing.Size(260, 27);
             this.txt_telefon.TabIndex = 4;
 
-            // lbl_email
+            
             this.lbl_email.AutoSize = true;
             this.lbl_email.Location = new System.Drawing.Point(10, 170);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.TabIndex = 5;
             this.lbl_email.Text = "E-Posta";
 
-            // txt_email
+            
             this.txt_email.Location = new System.Drawing.Point(10, 190);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(260, 27);
             this.txt_email.TabIndex = 6;
 
-            // btn_ekle
+            
             this.btn_ekle.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_ekle.FlatAppearance.BorderSize = 0;
             this.btn_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -148,7 +148,7 @@
             this.btn_ekle.UseVisualStyleBackColor = false;
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
 
-            // btn_guncelle
+            
             this.btn_guncelle.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_guncelle.FlatAppearance.BorderSize = 0;
             this.btn_guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,7 +161,7 @@
             this.btn_guncelle.UseVisualStyleBackColor = false;
             this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
 
-            // btn_sil
+            
             this.btn_sil.BackColor = System.Drawing.Color.IndianRed;
             this.btn_sil.FlatAppearance.BorderSize = 0;
             this.btn_sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,7 +174,7 @@
             this.btn_sil.UseVisualStyleBackColor = false;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
 
-            // btn_listele
+            
             this.btn_listele.BackColor = System.Drawing.Color.Gray;
             this.btn_listele.FlatAppearance.BorderSize = 0;
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -187,7 +187,7 @@
             this.btn_listele.UseVisualStyleBackColor = false;
             this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
 
-            // Form4
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;

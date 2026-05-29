@@ -145,7 +145,11 @@
     <Content Include="Resources\Icons\icons8-volunteer-64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UML\UML_Animal.png" />
+    <Content Include="UML\UML_CareRecord.png" />
+    <Content Include="UML\UML_Category.png" />
     <Content Include="UML\UML_Diyagramı.png" />
+    <Content Include="UML\UML_Volunteer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
