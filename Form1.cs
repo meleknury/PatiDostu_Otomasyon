@@ -16,6 +16,7 @@ namespace PatiDostu_Otomasyon
             SetupDataGridView();
             LoadCategories();
             SetupIcons();
+            LoadDashboard();
         }
 
         private void SetupDataGridView()
@@ -27,6 +28,70 @@ namespace PatiDostu_Otomasyon
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 248, 240);
             dataGridView1.RowTemplate.Height = 35;
             dataGridView1.GridColor = Color.FromArgb(220, 240, 220);
+        }
+
+        private void LoadDashboard()
+        {
+            try
+            {
+                int hayvanSayisi = db.Animals.Count();
+                int gonulluSayisi = db.Volunteers.Count();
+                int bakimSayisi = db.CareRecords.Count();
+                int kategoriSayisi = db.Categories.Count();
+
+                Panel pnl_dashboard = new Panel();
+                pnl_dashboard.Size = new Size(820, 80);
+                pnl_dashboard.Location = new Point(20, 0);
+                pnl_dashboard.BackColor = Color.Transparent;
+
+                pnl_dashboard.Controls.Add(CreateStatCard("Hayvan", hayvanSayisi.ToString(), Color.FromArgb(45, 158, 117), 0));
+                pnl_dashboard.Controls.Add(CreateStatCard("Gonullu", gonulluSayisi.ToString(), Color.FromArgb(70, 130, 180), 210));
+                pnl_dashboard.Controls.Add(CreateStatCard("Bakim", bakimSayisi.ToString(), Color.FromArgb(205, 133, 63), 420));
+                pnl_dashboard.Controls.Add(CreateStatCard("Kategori", kategoriSayisi.ToString(), Color.FromArgb(147, 112, 219), 630));
+
+                pnl_content.Controls.Add(pnl_dashboard);
+                pnl_dashboard.BringToFront();
+
+                dataGridView1.Location = new Point(20, 90);
+                dataGridView1.Size = new Size(540, 360);
+                pnl_form.Location = new Point(570, 90);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Dashboard hatası: {ex.Message}");
+            }
+        }
+
+        private Panel CreateStatCard(string title, string value, Color color, int x)
+        {
+            Panel card = new Panel();
+            card.Size = new Size(190, 70);
+            card.Location = new Point(x, 0);
+            card.BackColor = Color.White;
+
+            Panel leftBar = new Panel();
+            leftBar.Size = new Size(6, 70);
+            leftBar.Location = new Point(0, 0);
+            leftBar.BackColor = color;
+            card.Controls.Add(leftBar);
+
+            Label lblTitle = new Label();
+            lblTitle.Text = title;
+            lblTitle.Font = new Font("Segoe UI", 9f);
+            lblTitle.ForeColor = Color.Gray;
+            lblTitle.Location = new Point(15, 10);
+            lblTitle.AutoSize = true;
+            card.Controls.Add(lblTitle);
+
+            Label lblValue = new Label();
+            lblValue.Text = value;
+            lblValue.Font = new Font("Segoe UI", 20f, FontStyle.Bold);
+            lblValue.ForeColor = color;
+            lblValue.Location = new Point(15, 30);
+            lblValue.AutoSize = true;
+            card.Controls.Add(lblValue);
+
+            return card;
         }
 
         private void SetupIcons()
@@ -109,7 +174,7 @@ namespace PatiDostu_Otomasyon
                 };
                 db.Animals.Add(animal);
                 db.SaveChanges();
-                MessageBox.Show("Hayvan kaydedildi! 🐾");
+                MessageBox.Show("Hayvan kaydedildi!");
                 btn_listele_Click(sender, e);
             }
             catch (Exception ex)
